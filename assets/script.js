@@ -59,7 +59,7 @@ function showPrevious() {
 }
 
 function getCurrent(city) {
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=7e4c7478cc7ee1e11440bf55a8358ec3&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=005d6d1f98b5f64efff50b2d0ff0d2b4&units=imperial";
     $.ajax({
         url: queryURL,
         method: "GET",
