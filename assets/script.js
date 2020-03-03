@@ -91,6 +91,7 @@ function getCurrent(city) {
         cardBody.append($("<p>").attr("class", "card-text").text("Humidity: " + response.main.humidity + "%"));
         cardBody.append($("<p>").attr("class", "card-text").text("Wind Speed: " + response.wind.speed + " MPH"));
         var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=005d6d1f98b5f64efff50b2d0ff0d2b4&lat=" + response.coord.lat + "&lon=" + response.coord.lat;
+
         $.ajax({
             url: uvURL,
             method: "GET"
