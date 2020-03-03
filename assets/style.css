@@ -1,8 +1,4 @@
-.searcharea {
-    background-color: #e6f2ff;
-    padding: 20px;
-}
-.one-fifth {
+.wep {
     box-sizing: border-box;
     width: 20%;
     margin: 5px;
@@ -10,15 +6,18 @@
     
 }
 
-.one-fifth:first-child {
+.wep:first-child {
     margin-left: 0px;
 }
 
-.one-fifth:last-child{
+.wep:last-child{
     margin-right: 0px;
 }
 
-
+.searcharea {
+    background-color: #e6f2ff;
+    padding: 20px;
+}
 
 .uvindex {
     padding: 5px;
@@ -28,6 +27,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 10px 0px;
+}
+
+.uvindex {
+    padding: 5px;
 }
 
 #searchbtn{

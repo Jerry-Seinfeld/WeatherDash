@@ -35,7 +35,7 @@ function success(position) {
 
 }
 
-function error(){
+function error() {
     currentLoc = "Charlotte"
     getCurrent(currentLoc);
 }
@@ -46,7 +46,7 @@ function showPrevious() {
         var btns = $("<div>").attr("class", "list-group");
         for (var i = 0; i < savedLocations.length; i++) {
             var locBtn = $("<a>").attr("href", "#").attr("id", "loc-btn").text(savedLocations[i]);
-            if (savedLocations[i] == currentLoc){
+            if (savedLocations[i] == currentLoc) {
                 locBtn.attr("class", "list-group-item list-group-item-action active");
             }
             else {
@@ -63,7 +63,7 @@ function getCurrent(city) {
     $.ajax({
         url: queryURL,
         method: "GET",
-        error: function (){
+        error: function () {
             savedLocations.splice(savedLocations.indexOf(city), 1);
             localStorage.setItem("weathercities", JSON.stringify(savedLocations));
             initialize();
@@ -121,7 +121,7 @@ function getCurrent(city) {
 }
 
 function getForecast(city) {
-    //get 5 day forecast
+
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + city + "&APPID=7e4c7478cc7ee1e11440bf55a8358ec3&units=imperial";
     $.ajax({
         url: queryURL,
@@ -133,7 +133,8 @@ function getForecast(city) {
 
         for (var i = 0; i < response.list.length; i++) {
             if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-                var newCol = $("<div>").attr("class", "one-fifth");
+
+                var newCol = $("<div>").attr("class", "wep");
                 newrow.append(newCol);
 
                 var newCard = $("<div>").attr("class", "card text-white bg-primary");
@@ -159,7 +160,7 @@ function clear() {
     $("#earthforecast").empty();
 }
 
-function saveLoc(loc){
+function saveLoc(loc) {
     if (savedLocations === null) {
         savedLocations = [loc];
     }
