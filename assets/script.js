@@ -23,7 +23,7 @@ function initialize() {
 function success(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=f152b8746325cbe74a13fd0c7793daed";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=005d6d1f98b5f64efff50b2d0ff0d2b4";
     $.ajax({
         url: queryURL,
         method: "GET"
