@@ -90,7 +90,7 @@ function getCurrent(city) {
         cardBody.append($("<p>").attr("class", "card-text").html("Temperature: " + response.main.temp + " &#8457;"));
         cardBody.append($("<p>").attr("class", "card-text").text("Humidity: " + response.main.humidity + "%"));
         cardBody.append($("<p>").attr("class", "card-text").text("Wind Speed: " + response.wind.speed + " MPH"));
-        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=7e4c7478cc7ee1e11440bf55a8358ec3&lat=" + response.coord.lat + "&lon=" + response.coord.lat;
+        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=005d6d1f98b5f64efff50b2d0ff0d2b4&lat=" + response.coord.lat + "&lon=" + response.coord.lat;
         $.ajax({
             url: uvURL,
             method: "GET"
@@ -122,7 +122,7 @@ function getCurrent(city) {
 
 function getForecast(city) {
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + city + "&APPID=7e4c7478cc7ee1e11440bf55a8358ec3&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + city + "&APPID=005d6d1f98b5f64efff50b2d0ff0d2b4&units=imperial";
     $.ajax({
         url: queryURL,
         method: "GET"
