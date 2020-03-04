@@ -5,4 +5,4 @@ The dashboard allows the user to search by city or zipcode, it also includes a s
 
 [Website](https://jerry-seinfeld.github.io/WeatherDash/)
 
-![Image](Screenshot.png)
+![Image]()
